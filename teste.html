@@ -7,31 +7,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> 
     <link href="./style.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
-<section clas="tela">
-    <div class="container-sm bg-light">
-            <h1>Login</h1>
-            <p>Já tem uma conta?<br>Faça login abaixo!</p>
-            <button type="submit">Login</button>
-    </div>
-    <div class="container-sm bg-light">
-        <h1>Cadastro</h1>
-        <form method="POST" action="recebedados.php">
-            <label for="user">
-                <input type="text" placeholder="Seu usuário" name="userName">
-            </label>
-            <label>
-                <input type="email" placeholder="email@dominio.com"name="userEmail">
-            </label>
-            <label>
-                <input type="password" placeholder="Sua senha" name="userPass">
-            </label><br>
-            <button type="submit">Cadastro</button>
+    <div class="container-main">
+        <div class="container-left">
+            <div class="page-register">
+                <h1>Ainda não tem uma conta?</h1>
+                <h3>Faça seu registro abaixo!</h3>
+            </div>
         </div>
-        </form>
+        <div class="container-left">
+            <div class="page-login">
+                <h1>Faça seu Login abaixo!</h1>
+
+                <form action="./php/recebedados.php" method="POST" class="form">
+                    <label class="label" for="user">
+                        <input type="text" placeholder="Usuario" name="userLogin">
+                    </label>
+                    <label class="label" for="email">
+                        <input type="email" placeholder="Email" name="userEmail">
+                    </label>
+                    <label class="label" for="pass">
+                        <input type="password" placeholder="Senha" name="userPass">
+                    </label>
+            
+                    <button class="btn btn-outline-dark mt-3" type="reset">Limpar dados</button>
+                    <button class="btn btn-outline-success mt-3" type="submit" name="submit">Criar</button>
+            </div>
+        </div>
     </div>
-</section>
 </body>
 </html>
